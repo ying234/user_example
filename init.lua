@@ -2,7 +2,7 @@ return {
   -- Configure AstroNvim updates
   updater = {
     remote = "origin", -- remote to use
-    channel = "stable", -- "stable" or "nightly"
+    channel = "nightly", -- "stable" or "nightly"
     version = "latest", -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
     branch = "nightly", -- branch name (NIGHTLY ONLY)
     commit = nil, -- commit hash (NIGHTLY ONLY)
@@ -18,7 +18,8 @@ return {
   },
 
   -- Set colorscheme to use
-  colorscheme = "astrodark",
+  -- colorscheme = "astrodark",
+  colorscheme = "tokyonight",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {

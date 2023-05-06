@@ -20,6 +20,27 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<leader>fb"] = {
+      function() require("telescope.builtin").buffers { sort_lastused = true } end,
+      desc = "Find buffers",
+    },
+    ["<leader>a"] = {
+      function() require("telescope.builtin").buffers { previewer = false, sort_lastused = true } end,
+      desc = "Switch Buffers",
+    },
+    ["<leader>sl"] = { "<cmd>SessionManager! load_last_session<cr>", desc = "Load last session" },
+    ["<leader>sf"] = { "<cmd>SessionManager! load_session<cr>", desc = "Search sessions" },
+    -- quick save
+    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<leader>lb"] = { "<cmd>lua vim.lsp.buf.hover()<cr>", desc = "hover Documentation" },
+    ["<leader>lm"] = {
+      "<cmd>lua require('typescript').actions.addMissingImports()<CR>",
+      desc = "add missing import",
+    },
+    ["<leader>ltu"] = { "<cmd>lua require('typescript').actions.removeUnused()<CR>", desc = "remove unused import" },
+    ["<leader>ltf"] = { "<cmd>lua require('typescript').actions.fixAll()<CR>", desc = "fix all" },
+    ["<c-d>"] = { "<c-d>zz" },
+    ["<c-u>"] = { "<c-u>zz" },
   },
   t = {
     -- setting a mapping to false will disable it
